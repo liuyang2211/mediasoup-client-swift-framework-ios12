@@ -11,6 +11,6 @@ mediasoup-client-swift framework for minimum support ios12
 
 4.This framework minimumOSVersion iOS12
 
-### Pods
+### CocoaPods
 
-  pod 'mediasoup-client-swift-framework-ios12'
+pod 'mediasoup-client-swift-framework-ios12'
