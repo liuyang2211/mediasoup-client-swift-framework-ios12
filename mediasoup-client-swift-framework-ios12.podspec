@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint mediasoup-client-swift-framework-ios12.podspec' to ensure this is a
+#  Be sure to run `pod spec lint mediasoup-client-swift-ios12.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -15,9 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "mediasoup-client-swift-framework-ios12"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of mediasoup-client-swift-framework-ios12."
+  spec.name         = "mediasoup-client-swift-ios12"
+  spec.version      = "1.0.0"
+  spec.summary      = "mediasoup-client-swift framework for minimum support ios12."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,13 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  1.Thanks for mediasoup-client-swift dedicated team.
+  2.If you want to check original code, you can jump to https://github.com/VLprojects/mediasoup-client-swift
+  3.This framework built on https://github.com/VLprojects/mediasoup-client-swift/releases/tag/0.8.0
+  4.This framework minimumOSVersion iOS12.
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/mediasoup-client-swift-framework-ios12"
+  spec.homepage     = "https://github.com/liuyang2211/mediasoup-client-swift-framework-ios12.git"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -52,7 +56,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "刘洋" => "liuyangios@vjsp.cn" }
+  spec.author             = { "lewiswsq2211" => "lewis-wsq@163.com" }
   # Or just: spec.author    = "刘洋"
   # spec.authors            = { "刘洋" => "liuyangios@vjsp.cn" }
   # spec.social_media_url   = "https://twitter.com/刘洋"
@@ -64,7 +68,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios, "12.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,7 +83,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/mediasoup-client-swift-framework-ios12.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/liuyang2211/mediasoup-client-swift-framework-ios12.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +94,12 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  # spec.exclude_files = "Classes/Exclude"
+  spec.module_name = "Mediasoup"
+  spec.module_map = "Mediasoup/Mediasoup.modulemap"
+
+  spec.vendored_frameworks = "mediasoup-client-swift-ios12/Mediasoup.xcframework", "mediasoup-client-swift-ios12/WebRTC.xcframework"
 
   # spec.public_header_files = "Classes/**/*.h"
 
