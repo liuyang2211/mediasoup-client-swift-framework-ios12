@@ -96,8 +96,8 @@ Pod::Spec.new do |spec|
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
-  spec.module_name = "Mediasoup"
-  spec.module_map = "Mediasoup/Mediasoup.modulemap"
+  # spec.module_name = "Mediasoup"
+  # spec.module_map = "Mediasoup/Mediasoup.modulemap"
 
   spec.vendored_frameworks = "mediasoup-client-swift-ios12/Mediasoup.xcframework", "mediasoup-client-swift-ios12/WebRTC.xcframework"
 
